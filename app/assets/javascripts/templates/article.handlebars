@@ -1,0 +1,13 @@
+<div class="row"><h1>{{model.title}}</h1></div>
+<div class="row">
+  <div class="col-md-6">
+    {{body}}
+  </div>
+  <div class="col-md-6">
+    {{outlet}}
+  </div>
+
+</div>
+<p>{{#link-to 'edit_article' this}}Edit Article{{/link-to}}</p>
+<p><a href='#' {{action deleteArticle}}>Delete Article</a></p>
+<p>{{#link-to 'articles'}}Return to Homepage{{/link-to}}</p>

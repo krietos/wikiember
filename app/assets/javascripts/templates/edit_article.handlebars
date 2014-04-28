@@ -1,0 +1,17 @@
+<h1>Edit {{Article}}</h1>
+
+<form>
+  <div class='form-group'>
+    <label for="title">Title</label>
+    <span style="color:red">{{#each error in errors.title}}
+      {{error.message}}
+    {{/each}}</span>
+    {{input type='text' id='title' class='form-control' value=title}}
+  </div>
+  <div class='form-group'>
+    <label for="body">Body</label>
+    {{input type='text' id='body' class='form-control' value=body}}
+  </div>
+
+  <button {{action updateArticle}} class ='btn btn-default'>Edit Article</button>
+</form>
